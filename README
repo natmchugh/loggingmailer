@@ -1,0 +1,11 @@
+
+Instalation Instructions
+========================
+
+- Copy logging_mailer to silverstripe folder alongside sapphire etc
+
+- run /dev/build
+
+- Send an email
+
+- View reports at http://yoursite.com/admin/reports report should be shown in left column
