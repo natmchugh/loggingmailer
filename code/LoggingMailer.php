@@ -10,7 +10,7 @@ class LoggingMailer extends Mailer{
 		$log->From = $from;
 		$log->Subject = $subject;
 		$log->Body = $plainContent;
-		$log->Date = date('Y-m-d h:i:s');
+		$log->Date = date('Y-m-d H:i:s');
 		$log->write();
 		} else {
 		  throw new Exception("Mail not accepted for delivery to $to");
@@ -33,7 +33,7 @@ class LoggingMailer extends Mailer{
 		$log->From = $from;
 		$log->Subject = $subject;
 		$log->Body = $htmlContent;
-		$log->Date = date('Y-m-d h:i:s');
+		$log->Date = date('Y-m-d H:i:s');
 		$log->write();
 		} else {
 		  throw new Exception("Mail not accepted for delivery to $to");

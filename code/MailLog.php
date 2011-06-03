@@ -2,7 +2,6 @@
 
 class MailLog extends DataObject {
     
-    
 	static $db = array(
 	        "To" => "Varchar",
                 "From" => "Varchar",
