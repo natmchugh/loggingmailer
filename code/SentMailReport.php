@@ -23,8 +23,6 @@ class SentMailReport extends SS_Report {
 			'Date' => array(
 				"title" => "Date", // todo: use NestedTitle(2)
 				"link" => true,
-				'formatting' => '<a href=\"custom-admin/$ID\"> {$Date.Nice} </a>'
-			,
 			),
 			"To" => array(
 				"title" => "To", // todo: use NestedTitle(2)
@@ -32,7 +30,7 @@ class SentMailReport extends SS_Report {
 			),
 			"From" => array('title' => 'From',),
 			"Subject" => array('title' => 'Subject',
-				'formatting' => '<a href="#">$Subject</a>'),
+				),
 			"Body" => array('title' => 'Body',),
 		);
 	}
