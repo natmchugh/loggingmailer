@@ -18,7 +18,7 @@ class LoggingMailer extends Mailer{
    
    function sendPlain($to, $from, $subject, $plainContent, $attachedFiles = false, $customheaders = false) {
 	        
-		if ( parent::sendPlain($to, $from, $subject, $plainContent, $attachedFiles = false, $customheaders = false) ) {
+		if ( parent::sendPlain($to, $from, $subject, $plainContent, $attachedFiles, $customheaders) ) {
 	        $log = new MailLog();
 		$log->To = $to;
 		$log->From = $from;
@@ -41,7 +41,7 @@ class LoggingMailer extends Mailer{
 	 */
 	function sendHTML($to, $from, $subject, $htmlContent, $attachedFiles = false, $customheaders = false, $plainContent = false, $inlineImages = false) {
 	
-		if (parent::sendHTML($to, $from, $subject, $htmlContent, $attachedFiles = false, $customheaders = false, $plainContent = false, $inlineImages = false) ) {
+		if (parent::sendHTML($to, $from, $subject, $htmlContent, $attachedFiles, $customheaders, $plainContent, $inlineImages) ) {
 	        $log = new MailLog();
 		$log->To = $to;
 		$log->From = $from;
